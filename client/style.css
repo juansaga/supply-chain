@@ -1,0 +1,36 @@
+body {
+    background: #747c839d;
+    color: white
+}
+
+.box {
+    border: 1px solid white;
+    width: 320px;
+    height: 100px;
+  }
+
+  .box1 {
+    border: 1px solid white;
+    width: 500px;
+    height: 100px;
+    overflow: scroll;
+  }
+
+  h1, h2, h4, p, em, li {
+    color: #747c839d
+  }
+  #productor,
+  #vehiculo,
+  #almacen,
+  #hotel,
+  #productor2,
+  #vehiculo2,
+  #almacen2,
+  #hotel2 {
+    margin-top: 10px;
+    display: none;
+  }
+
+.selector2 {
+  padding: 40px 0 10px 0
+}

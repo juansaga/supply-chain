@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel='stylesheet' href='/libs/bootstrap/dist/css/bootstrap.min.css'>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel='stylesheet' href='./style.css'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<title>Blockchain</title>
+</head>
+
+<body>
+	<div class="container py-5">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="card card-body rounded-4 mb-4 white">
+					<h1>Cadena De Suministro</h1>
+				</div>
+				<form class="card card-body white mb-4 rounded-4" id="taskForm">
+					<h4>Crear transacción</h4>
+
+					<p>Producto a transferir: </p>
+					<div>
+						<select id="producto">
+							<option value="pargo rojo">Pargo Rojo</option>
+							<option value="corvina">Corvina</option>
+							<option value="dorado">Dorado</option>
+							<option value="atun">Atún</option>
+							<option value="tilapia">Tilapia</option>
+						</select>
+						<p>Valor: </p><input id="valorProducto" type="number" min="0">
+					</div>
+				
+
+					<p>Tipo de usuario que envía: </p>
+					<div>
+						<select id="search" name="state">
+							<option value="" class="selected">Seleccione quien realiza la transacción</option>
+							<option value="productor">Productor</option>
+							<option value="vehiculo">Vehiculo</option>
+							<option value="almacen">Almacén</option>
+							<option value="hotel">Hotel</option>
+						</select>
+					</div>
+
+					
+					<select id="productor">
+						<p>¿Quién produjo el producto?</p>
+						<option value="Ana">Ana</option>
+						<option value="Juan">Juan</option>
+						<option value="Carlos">Carlos</option>
+					</select>
+
+
+
+					
+					<select id="vehiculo">
+						<em>¿Qué vehiculo transporta el producto?</em>
+						<option value="AAA000">AAA000</option>
+						<option value="BBB111">BBB111</option>
+						<option value="CCC222">CCC222</option>
+					</select>
+
+
+					
+					<select id="almacen">
+						<em>¿Dónde se almacenó?</em>
+						<option value="Laureles">Laureles</option>
+						<option value="Niquia">Niquia</option>
+						<option value="Sabaneta">Sabaneta</option>
+					</select>
+
+
+					
+					<select id="hotel">
+						<em>¿Qué hotel lo recibio?</em>
+						<option value="Dann Carlton">Dann Carlton</option>
+						<option value="Intercontinental">Intercontinental</option>
+						<option value="Marriot">Marriot</option>
+					</select>
+
+
+
+					
+					<div class="selector2">
+						<p>Tipo de usuario que recibe: </p>
+						<select id="search2" name="state2">
+							<option value="" class="selected2">Seleccione quien recibe la transacción</option>
+							<option value="productor2">Productor</option>
+							<option value="vehiculo2">Vehiculo</option>
+							<option value="almacen2">Almacén</option>
+							<option value="hotel2">Hotel</option>
+						</select>
+					</div>
+
+					
+					<select id="productor2">
+						<em>¿Quién produjo el producto?</em>
+						<option value="Ana">Ana</option>
+						<option value="Juan">Juan</option>
+						<option value="Carlos">Carlos</option>
+					</select>
+
+
+					
+					<select id="vehiculo2">
+						<em>¿Qué vehiculo transporta el producto?</em>
+						<option value="AAA000">AAA000</option>
+						<option value="BBB111">BBB111</option>
+						<option value="CCC222">CCC222</option>
+					</select>
+
+
+					
+					<select id="almacen2">
+						<em>¿Dónde se almacenó?</em>
+						<option value="Laureles">Laureles</option>
+						<option value="Niquia">Niquia</option>
+						<option value="Sabaneta">Sabaneta</option>
+					</select>
+
+
+					
+					<select id="hotel2">
+						<em>¿Qué hotel lo recibio?</em>
+						<option value="Dann Carlton">Dann Carlton</option>
+						<option value="Intercontinental">Intercontinental</option>
+						<option value="Marriot">Marriot</option>
+					</select>
+
+
+					<button class="btn btn-primary">Send</button>
+				</form>
+
+				<form class="card card-body rounded-4 mb-4 white" id="minar">
+					<h4>Transacciones para agregar a la cadena</h4>
+					<ol id="mempool" class="box"></ol>
+					<button class="btn btn-primary">Minar bloque.</button>
+				</form>
+
+			</div>
+			<div class="col-md-6">
+				<div class="card white">
+					<h2>Cadena de Bloques</h2>
+					<ol id="cadena"></ol>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Scripts -->
+	<script src="./blockchain.js"></script>
+	<script src="./ui.js"></script>
+</body>
+
+</html>
